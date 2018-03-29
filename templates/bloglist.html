@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DuckZero</title>
+{% load static %}
+<meta name="keywords" content="任嘉辉个人技术站" />
+<meta name="description" content="任嘉辉个人技术站" />
+<link href="{% static "css/base.css" %}" rel="stylesheet">
+<link href="{% static "css/main.css" %}" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+</head>
+<body>
+<div id="wrapper">
+   <header>
+    <div class="headtop"></div>
+    <div class="contenttop">
+      <div class="logo f_l">DuckZero</div>
+      <div class="blank"></div>
+      <nav>
+        <div  class="navigation">
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href=" {% url 'about' %}">About</a></li>
+            <li><a href="#">Blog</a>
+            <li><a href="#">Contact</a> </li>
+          </ul>
+        </div>
+      </nav>
+      <SCRIPT type=text/javascript>
+  // Navigation Menu
+  $(function() {
+    $(".menu ul").css({display: "none"}); // Opera Fix
+    $(".menu li").hover(function(){
+      $(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
+    },function(){
+      $(this).find('ul:first').css({visibility: "hidden"});
+    });
+  });
+</SCRIPT>
+    </div>
+  </header>
+  <div class="container">
+    <div class="con_content">
+      <div class="about_box">
+        <h2 class="nh1"><span><a href="index" target="_blank">网站首页</a>>>博客列表</span></h2>
+           <div class="dtxw box">
+   		{% for blog in bloglist%}
+        <li>
+          <div class="dttext f_l">
+            <ul>
+              <h2><a href="{% url 'article' blog.id %}">{{ blog.title}}</a></h2>
+              <p>{{blog.text}}</p>
+              <span>{{ blog.time | date:'Y-m-d'}}</span>
+            </ul>
+          </div>
+        </li>
+        {% endfor %}
+      </div>
+      </div>
+    </div>
+    <div class="blank"></div>
+  </div>
+  <!-- container??? ??? -->
+
+{#      <div class="pagelist"><a href="/">?ҳ</a><a href="/"></a><a href="/"></a><a href="/">#}
+  <footer>
+    <div class="footer">
+      <div class="f_l">
+        <p>All Rights Reserved </p>
+      </div>
+      <div class="f_r textr">
+        <p><a href="http://www.yangqq.com">Design by 杨青</a></p>
+      </div>
+    </div>
+  </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DuckZero</title>
+{% load static %}
+<meta name="keywords" content="任嘉辉个人技术站" />
+<meta name="description" content="任嘉辉个人技术站" />
+<link href="{% static "css/base.css" %}" rel="stylesheet">
+<link href="{% static "css/main.css" %}" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+</head>
+<body>
+<div id="wrapper">
+   <header>
+    <div class="headtop"></div>
+    <div class="contenttop">
+      <div class="logo f_l">DuckZero</div>
+      <div class="blank"></div>
+      <nav>
+        <div  class="navigation">
+          <ul class="menu">
+            <li><a href=" {% url 'index' %}">Home</a></li>
+            <li><a href=" {% url 'about' %}">About</a></li>
+{#            <li><a href=" {% url 'bloglist' %}">Blog</a>#}
+{#            <li><a href=" {% url 'contact'%}">Contact</a> </li>#}
+          </ul>
+        </div>
+      </nav>
+      <SCRIPT type=text/javascript>
+	// Navigation Menu
+	$(function() {
+		$(".menu ul").css({display: "none"}); // Opera Fix
+		$(".menu li").hover(function(){
+			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
+		},function(){
+			$(this).find('ul:first').css({visibility: "hidden"});
+		});
+	});
+</SCRIPT>
+    </div>
+  </header>
+  <div class="container">
+    <div class="con_content">
+      <div class="about_box">
+        <h2 class="nh1"><span>您现在的位置是：<a href="{% url 'index' %}" target="_blank">网站首页</a>>><a href="#" target="_blank">{{ blog.catagory }}</a></span><b>正文</b></h2>
+        <div class="f_box">
+          <p class="a_title">{{ blog.title }}</p>
+          <p class="p_title"></p>
+        </div>
+        <ul class="about_content">
+          <p>{{ blog.text }}</p>
+        {% for tag in tags %}
+            <p>{{ tag.name }}</p>
+        {% endfor %}
+          <p>{{ blog.time }}</p>
+        </ul> 
+        <!-- container代码 结束 --> 
+      </div>
+    </div>
+    <div class="blank"></div>
+  </div>
+  <!-- container代码 结束 -->
+  
+  <footer>
+    <div class="footer">
+      <div class="f_l">
+        <p>All Rights Reserved </p>
+      </div>
+      <div class="f_r textr">
+        <p><a href="http://www.yangqq.com">Design by 杨青</a></p>
+      </div>
+    </div>
+  </footer>
+    </div>
+</body>
+</html>
