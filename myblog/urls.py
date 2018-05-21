@@ -25,5 +25,6 @@ urlpatterns = [
     path(r'',views.index,name='index'),
     path(r'bloglist',views.bloglist,name='bloglist'),
     path(r'about',views.about,name='about'),
-    path(r'article/<int:blog_id>/', views.article, name='article')
+    path(r'article/<int:blog_id>/', views.article, name='article'),
+    path(r'forest',views.forest)
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

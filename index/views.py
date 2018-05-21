@@ -24,3 +24,5 @@ def article(request,blog_id):
 def bloglist(request):
     blog_list = blogtext.objects.all()
     return render(request,'bloglist.html',{'bloglist':blog_list})
+def forest(request):
+    return render(request, 'forest.html')
