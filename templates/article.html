@@ -8,9 +8,6 @@
 <meta name="description" content="任嘉辉个人技术站" />
 <link href="{% static "css/base.css" %}" rel="stylesheet">
 <link href="{% static "css/main.css" %}" rel="stylesheet">
-<!--[if lt IE 9]>
-<script src="js/modernizr.js"></script>
-<![endif]-->
 <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
 </head>
 <body>
@@ -25,8 +22,9 @@
           <ul class="menu">
             <li><a href=" {% url 'index' %}">Home</a></li>
             <li><a href=" {% url 'about' %}">About</a></li>
-{#            <li><a href=" {% url 'bloglist' %}">Blog</a>#}
-{#            <li><a href=" {% url 'contact'%}">Contact</a> </li>#}
+            <li><a href=" {% url 'bloglist' %}">Blog</a>
+            <li><a href="#">Contact</a> </li>
+<!--             <li><a href=" {% url 'contact'%}">Contact</a> </li> -->
           </ul>
         </div>
       </nav>

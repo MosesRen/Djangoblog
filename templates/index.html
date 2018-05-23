@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>DuckZero</title>
-    {% load static %}
+{% load static %}
 <meta name="keywords" content="任嘉辉个人技术站" />
 <meta name="description" content="任嘉辉个人技术站" />
 <link href="{% static "css/base.css" %}" rel="stylesheet">
@@ -52,9 +52,9 @@
       <figure><img src="{% static "images/img_1.jpg" %}"></figure>
       <ul>
         <p>{{ blog.text }}</p>
-        <a  href="/jstt/bj/2017-07-13/784.html" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
+        <a  href="{% url 'article' blog.id %}" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
       </ul>
-      <p class="dateview"><span>{{ blog.time |date:'Y-m-d H:i:s' }}</span><span>类型：[{{ blog.catagory }}]</span><span>标签</span></p>
+      <p class="dateview"><span>{{ blog.time |date:'Y-m-d H:i:s' }}</span><span>类型：[{{ blog.catagory }}]</span><span>标签:[{{ blog.tags }}]</span></p>
         {% endfor %}
     </div>
     <div class="r_box f_r">

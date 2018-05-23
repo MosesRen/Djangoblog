@@ -25,7 +25,7 @@
           <ul class="menu">
             <li><a href=" {% url 'index' %}">Home</a></li>
             <li><a href=" {% url 'about' %}">About</a></li>
-            <li><a href="#">Blog</a>
+            <li><a href="{% url 'bloglist' %}">Blog</a></li>
             <li><a href="#">Contact</a> </li>
           </ul>
         </div>
@@ -46,7 +46,7 @@
   <div class="container">
     <div class="con_content">
       <div class="about_box">
-        <h2 class="nh1"><span>您现在的位置是：<a href="{% url 'index' %}" target="_blank">网站首页</a></span><b>个人简介</b></h2>
+        <h2 class="nh1"><span>您现在的位置是：<a href="{% url 'index' %}" target="_blank">about</a>><b>个人简介</b></span></h2>
         <div class="f_box">
           <p class="a_title">{{ about.title }}</p>
           <p class="p_title"></p>
