@@ -1,0 +1,4 @@
+# Windows:
+db.sqlite3
+*.py[cod]
+/myblog/setting.py
