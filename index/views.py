@@ -11,7 +11,7 @@ def index(request):
         blog.text=blog.text[0:200]
     return render(request, 'index.html',{'blog_list':blog_list})
 def about(request):
-    about = aboutme.objects.get(id=1)
+    about = aboutme.objects.get(title="个人简介")
     return render(request,'about.html',{'about':about})
 def article(request,blog_id):
     print(blog_id)
