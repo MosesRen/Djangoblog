@@ -54,7 +54,8 @@
         <p>{{ blog.text }}</p>
         <a  href="{% url 'article' blog.id %}" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
       </ul>
-      <p class="dateview"><span>{{ blog.time |date:'Y-m-d H:i:s' }}</span><span>类型：[{{ blog.catagory }}]</span><span>标签:[{{ blog.tags }}]</span></p>
+      <p class="dateview"><span>{{ blog.time |date:'Y-m-d H:i:s' }}</span><span>类型：[{{ blog.catagory }}]</span><span>标签:[
+                ]</span></p>
         {% endfor %}
     </div>
     <div class="r_box f_r">
@@ -65,7 +66,6 @@
             <li><a class="email" href="#" target="_blank">我的电话</a></li>
             <li><a class="qq" href="#" target="_blank">我的邮箱</a></li>
             <li><a class="tel" href="#" target="_blank">我的QQ</a></li>
-            <li><a class="prize" href="#">个人奖项</a></li>
           </ul>
         </div>
       </div>

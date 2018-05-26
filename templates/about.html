@@ -46,16 +46,14 @@
   <div class="container">
     <div class="con_content">
       <div class="about_box">
-        <h2 class="nh1"><span>您现在的位置是：<a href="{% url 'index' %}" target="_blank">about</a>><b>个人简介</b></span></h2>
+        <h2 class="nh1"><span>您现在的位置是：<a href="{% url 'index' %}" target="_blank">网站主页</a>>><b>个人简介</b></span></h2>
         <div class="f_box">
           <p class="a_title">{{ about.title }}</p>
           <p class="p_title"></p>
-          <!--  <p class="box_p"><span>发布时间：2017-07-07 15:12:42</span><span>作者：唐孝文</span><span>来源：稽查支队</span><span>点击：111056</span></p>--> 
-          <!-- 可用于内容模板 --> 
         </div>
         <ul class="about_content">
           <p>{{ about.text }}</p>
-          <p><img src="//{{ about.img }}"></p>
+          <p><img src="/media/{{ about.img }}"></p>
         </ul>       
         <!-- container代码 结束 --> 
       </div>

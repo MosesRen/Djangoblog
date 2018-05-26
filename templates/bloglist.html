@@ -46,7 +46,7 @@
   <div class="container">
     <div class="con_content">
       <div class="about_box">
-        <h2 class="nh1"><span><a href="index" target="_blank">网站首页</a>>>博客列表</span></h2>
+         <h2 class="nh1"><span>您现在的位置是：<a href="{% url 'index' %}" target="_blank">网站主页</a>>><b>博客列表</b></span></h2>
            <div class="dtxw box">
    		{% for blog in bloglist%}
         <li>

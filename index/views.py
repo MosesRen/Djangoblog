@@ -9,6 +9,8 @@ def index(request):
     blog_list = blogtext.objects.all()
     for blog in blog_list:
         blog.text=blog.text[0:200]
+        blog.tags = blog.tags.all()
+        print(blog.tags)
     return render(request, 'index.html',{'blog_list':blog_list})
 def about(request):
     about = aboutme.objects.get(id=1)
