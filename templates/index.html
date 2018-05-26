@@ -54,8 +54,7 @@
         <p>{{ blog.text }}</p>
         <a  href="{% url 'article' blog.id %}" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
       </ul>
-      <p class="dateview"><span>{{ blog.time |date:'Y-m-d H:i:s' }}</span><span>类型：[{{ blog.catagory }}]</span><span>标签:[
-                ]</span></p>
+      <p class="dateview"><span>{{ blog.time |date:'Y-m-d H:i:s' }}</span><span>类型：[{{ blog.catagory }}]</span></p>
         {% endfor %}
     </div>
     <div class="r_box f_r">
